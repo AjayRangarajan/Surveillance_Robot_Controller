@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+</style>
+</head>
+<body style="background-color: black; color: white;">
+<div data-role="page">
+  <div data-role="main" class="ui-content">
+  <h3 >Camera Vision</h3>
+	<iframe src="http://{{ip_address}}:{{camera_port}}" title="Robot Camera"></iframe>
+  <div class="sensor-data-link">
+    <a href="http://{{ip_address}}:{{sensor_data_port}}">Click here to view the sensor data</a>
+  </div>
+    <form>
+      <label for="switch"><h3>Remote control</h3></label>
+      <nav>
+        <a id="play" class="button top" href="#"><i class="icon-play"></i></a>
+        <a id="moveright" class="button right" href="#"><i class="icon-forward"></i></a>
+        <a id="moveleft" class="button left" href="#"><i class="icon-backward"></i></a>
+        <a id="moveback" class="button bottom" href="#"><i class="icon-pause"></i></a>
+        <a id="pause" class="center-button" href="#"><i class="icon-stop"></i></a>
+      </nav>
+    </form>
+ </div>
+</div>
+
+</body>
+</html>
